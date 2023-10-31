@@ -12,10 +12,9 @@
             margin: 0;
             padding: 0;
             background-color: #aeefff;
-            overflow: hidden;
             font-family: 'Poppins';
-            font-size: 22px;
-            text-align: center; /* Center the content */
+            font-size: 18px;
+            text-align: center;
         }
 
         .snowflake {
@@ -26,6 +25,8 @@
             pointer-events: none;
             z-index: 9999;
             animation: snowfall linear infinite;
+            width: 100%;
+            height: 100%;
         }
 
         @keyframes snowfall {
@@ -37,26 +38,39 @@
                 transform: translateY(110vh);
             }
         }
+        /* Add padding to blurb1 paragraphs only on desktop */
+        @media (min-width: 768px) {
+            .blurb1 p {
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+        }
+
+        .blurb1 {
+            padding: 20px;
+        }
+
+        .blurb1 img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .blurb1 p {
+            margin: 10px 0;
+
+        }
 
         .iframe-container {
-            width: 100%; /* Make container responsive */
-            max-width: 800px; /* Set a maximum width for the content */
-            margin: 40px auto; /* Center the container horizontally and provide vertical margin */
-            padding: 20px; /* Add padding to the container */
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
         }
 
         iframe {
-            width: 100%; /* Make iframe responsive */
-            height: 600px; /* Set a fixed height or adjust according to your content */
+            width: 100%;
             border: none;
             overflow: hidden;
-        }
-
-        /* Apply more padding on smaller screens (e.g., mobile devices) */
-        @media (max-width: 768px) {
-            .iframe-container {
-                padding: 40px; /* Increase padding on mobile devices */
-            }
         }
     </style>
 </head>
@@ -88,14 +102,41 @@
 
     <h1>Christmas in Miami</h1>
 
+    <div class="blurb1">
+      <h2>Details:</h2>
+
+        <img src="xmas23/1.png" alt="" class="candy-cane">
+        <p>Celebrate the joy of giving this holiday season!</p>
+        <p>We're adding a sprinkle of mystery with our Secret Santa exchange! ✨ To ensure everyone discovers the perfect
+            gift, <a href="https://www.gifthero.com/register" target="_blank">please click this link</a> to craft your
+            wishlist.</p>
+        <p>Oh, and don't forget to dress up in your festive best – our attire is dressy casual!
+        </p>
+        <p>As a delightful bonus, we'll be capturing the magic with family Christmas pictures! Stay tuned, as we'll be
+            revealing your Secret Santa picks in the coming weeks. Let's make this holiday season truly enchanting,
+            together! Happy gifting and Merry Christmas!
+        </p>
+        <p>Parking: Please use street parking or uber. </p>
+        <img src="xmas23/2.png" alt="" class="candy-cane">
+    </div>
+<h2><center>How-To: Create a Wishlist</center></h2>
     <div class="iframe-container">
-        <iframe loading="lazy"
-            src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFyplznXHU&#x2F;view?embed"
-            allowfullscreen="allowfullscreen" allow="fullscreen">
-        </iframe>
+        <iframe loading="lazy" src="https://www.youtube.com/embed/Wt7H_WQgB0o?si=VkCIA-duitoAXU1U"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen height="315"></iframe>
+    </div>
+    <div class="blurb1">
+    <h2><center>Add Your Link to the Family Wish List</center></h2>
+    <p>Welcome to our Secret Santa Gift Wishlist! 🎁 This form is your go-to guide when picking out the perfect gift for your Secret Santa recipient. Explore their wishes, and let your creativity shine while staying within the $50 limit. Happy gifting, and here's to making this holiday season extra special!</p>
+  </div>
+
+
+    <div class="iframe-container">
+        <iframe loading="lazy" src="https://www.canva.com/design/DAFyplznXHU/view?embed" allowfullscreen="allowfullscreen"
+            allow="fullscreen" height="800"></iframe>
     </div>
 
-    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFyplznXHU&#x2F;view?utm_content=DAFyplznXHU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Christmas Gift Lists</a> by Tina Kelly Brand
 </body>
 
 </html>
