@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Wonderland</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #aeefff;
+            overflow: hidden;
+            font-family: 'Poppins';
+            font-size: 22px;
+            text-align: center; /* Center the content */
+        }
+
+        .snowflake {
+            position: absolute;
+            font-size: 20px;
+            color: white;
+            user-select: none;
+            pointer-events: none;
+            z-index: 9999;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-10vh);
+            }
+
+            100% {
+                transform: translateY(110vh);
+            }
+        }
+
+        .iframe-container {
+            width: 100%; /* Make container responsive */
+            max-width: 800px; /* Set a maximum width for the content */
+            margin: 40px auto; /* Center the container horizontally and provide vertical margin */
+            padding: 20px; /* Add padding to the container */
+        }
+
+        iframe {
+            width: 100%; /* Make iframe responsive */
+            height: 600px; /* Set a fixed height or adjust according to your content */
+            border: none;
+            overflow: hidden;
+        }
+
+        /* Apply more padding on smaller screens (e.g., mobile devices) */
+        @media (max-width: 768px) {
+            .iframe-container {
+                padding: 40px; /* Increase padding on mobile devices */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Function to create snowflakes
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.className = "snowflake";
+            snowflake.innerHTML = "❄";
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+            snowflake.style.opacity = Math.random();
+            document.body.appendChild(snowflake);
+
+            // Remove the snowflake after animation
+            snowflake.addEventListener("animationiteration", () => {
+                snowflake.remove();
+                createSnowflake();
+            });
+        }
+
+        // Create initial snowflakes
+        for (let i = 0; i < 50; i++) {
+            createSnowflake();
+        }
+    </script>
+
+    <h1>Christmas in Miami</h1>
+
+    <div class="iframe-container">
+        <iframe loading="lazy"
+            src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFyplznXHU&#x2F;view?embed"
+            allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+    </div>
+
+    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFyplznXHU&#x2F;view?utm_content=DAFyplznXHU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Christmas Gift Lists</a> by Tina Kelly Brand
+</body>
+
+</html>
