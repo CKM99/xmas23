@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Christmas Wonderland</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
@@ -19,49 +19,40 @@
         }
 
         .snowflake {
-            position: absolute;
-            font-size: 20px;
-            color: white;
-            user-select: none;
-            pointer-events: none;
-            z-index: 9999;
-            animation: snowfall linear infinite;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            animation: snowfall 10s linear infinite;
         }
 
         @keyframes snowfall {
             0% {
-                transform: translateY(-10vh);
+                background-position: 0 0;
             }
-
             100% {
-                transform: translateY(110vh);
-            }
-        }
-
-        /* Add padding to blurb1 paragraphs only on desktop */
-        @media (min-width: 768px) {
-            .blurb1 p {
-                padding-left: 10px;
-                padding-right: 10px;
+                background-position: 0 100vh;
             }
         }
 
         .blurb1 {
             padding: 20px;
-            max-width: 100%; /* Ensure the content does not exceed the screen width */
-            margin: 0 auto; /* Center the content */
+            max-width: 100%;
+            margin: 0 auto;
         }
 
         .blurb1 img {
-            width: 100%; /* Make images responsive within their containers */
+            width: 100%;
             height: auto;
             max-width: 100%;
         }
 
         .blurb1 p {
             margin: 10px 0;
+            text-align: center;
         }
 
         .iframe-container {
@@ -69,6 +60,7 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
+            box-sizing: border-box;
         }
 
         iframe {
@@ -78,14 +70,14 @@
         }
 
         a[target="_blank"] {
-            color: inherit;
-            text-decoration: inherit;
+            color: darkblue;
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <!-- Snowflake animation script here -->
+    <div class="snowflake"></div>
 
     <h1>Christmas in Miami</h1>
 
@@ -107,7 +99,7 @@
         <img src="xmas23/2.png" alt="" class="candy-cane">
     </div>
 
-    <h2><center>How-To: Create a Wishlist</center></h2>
+    <h2>How-To: Create a Wishlist</h2>
 
     <div class="iframe-container">
         <iframe loading="lazy" src="https://www.youtube.com/embed/Wt7H_WQgB0o?si=VkCIA-duitoAXU1U"
@@ -117,11 +109,10 @@
     </div>
 
     <div class="blurb1">
-        <h2><center>Add Your Link to the Family Wish List</center></h2>
+        <h2>Add Your Link to the Family Wish List</h2>
         <p>Welcome to your Secret Santa Gift Wishlist! 🎁 This form is your go-to guide when picking out the perfect gift
             for your Secret Santa recipient. Explore their wishes, and let your creativity shine while staying within the
-            $50 limit. In case you have trouble using the document below, you also paste your gifthero link <a
-                href="https://www.gifthero.com/register" target="_blank">here.</a> Happy gifting, and here's to making
+            $50 limit. In case you have trouble using the document below, you also paste your gifthero link <a href="https://www.gifthero.com/register" target="_blank">here.</a> Happy gifting, and here's to making
             this holiday season extra special!</p>
     </div>
 
