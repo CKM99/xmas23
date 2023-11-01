@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Christmas Wonderland</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -18,24 +21,11 @@
             overflow-x: hidden; /* Hide horizontal scrollbar */
         }
 
-        .snowflake {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            animation: snowfall 10s linear infinite;
-        }
-
-        @keyframes snowfall {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 0 100vh;
-            }
+        h1 {
+            padding-top: 5px;
+            padding: 20px;
+            font-family: 'Mountains of Christmas', serif;
+            font-size: 50px;
         }
 
         .blurb1 {
@@ -53,6 +43,15 @@
         .blurb1 p {
             margin: 10px 0;
             text-align: center;
+        }
+
+        /* Media query for desktop (screens larger than 768px) */
+        @media (min-width: 769px) {
+            .blurb1 {
+                padding-left: 200px; /* Adjust the padding as needed */
+                padding-right: 200px; /* Adjust the padding as needed */
+
+            }
         }
 
         .iframe-container {
@@ -73,29 +72,34 @@
             color: darkblue;
             text-decoration: underline;
         }
+
+        .header-img {
+            height: auto;
+            max-width: 150px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="snowflake"></div>
+    <script type="text/javascript">
 
-    <h1>Christmas in Miami</h1>
+    </script>
+    <div class="header-container">
+        <img src="cans.png" alt="" class="header-img">
+        <h1>Christmas in Miami</h1>
+    </div>
 
     <div class="blurb1">
         <h2>Details:</h2>
-
         <img src="xmas23/1.png" alt="" class="candy-cane">
         <p>Celebrate the joy of giving this holiday season!</p>
         <p>We're adding a sprinkle of mystery with our Secret Santa exchange! ✨ To ensure everyone discovers the perfect
-            gift, <a href="https://www.gifthero.com/register" target="_blank">please click this link</a> to craft your
-            wishlist.</p>
-        <p>Oh, and don't forget to dress up in your festive best – our attire is dressy casual!
-        </p>
+            gift, <a href="https://www.gifthero.com/register">please click this link</a> to craft your wishlist.</p>
+        <p>Oh, and don't forget to dress up in your festive best – our attire is dressy casual!</p>
         <p>As a delightful bonus, we'll be capturing the magic with family Christmas pictures! Stay tuned, as we'll be
             revealing your Secret Santa picks in the coming weeks. Let's make this holiday season truly enchanting,
-            together! Happy gifting and Merry Christmas!
-        </p>
-        <p>Parking: Please use street parking or uber. </p>
+            together! Happy gifting and Merry Christmas!</p>
+        <p>Parking: Please use street parking or uber.</p>
         <img src="xmas23/2.png" alt="" class="candy-cane">
     </div>
 
@@ -112,8 +116,10 @@
         <h2>Add Your Link to the Family Wish List</h2>
         <p>Welcome to your Secret Santa Gift Wishlist! 🎁 This form is your go-to guide when picking out the perfect gift
             for your Secret Santa recipient. Explore their wishes, and let your creativity shine while staying within the
-            $50 limit. In case you have trouble using the document below, you also paste your gifthero link <a href="https://www.gifthero.com/register" target="_blank">here.</a> Happy gifting, and here's to making
-            this holiday season extra special!</p>
+            $50 limit. Click <a
+                href="https://www.canva.com/design/DAFyplznXHU/JYEMyqmkO9yJG5XmVpgC-A/edit?utm_content=DAFyplznXHU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                target="_blank">here</a> to add your gifthero link to the document below. Happy gifting, and here's to
+            making this holiday season extra special!</p>
     </div>
 
     <div class="iframe-container">
